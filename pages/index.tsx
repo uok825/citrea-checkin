@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAccount, useReadContract, useWriteContract } from "wagmi";
-import { ABI } from "./abis/contractABI";
-import Navbar from "./components/Navbar";
+import { ABI } from "../components/abis/contractABI";
+import Navbar from "../components/Navbar";
 import { BigNumber } from "@ethersproject/bignumber";
 
 const contractAddress = "0x6848F371e6C454a4D29a0D00fd1792Da8989Fa25";
