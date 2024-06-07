@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useAccount, useReadContract, useWriteContract } from "wagmi";
 import { ABI } from "../components/abis/contractABI";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { BigNumber } from "@ethersproject/bignumber";
 
 const contractAddress = "0x6848F371e6C454a4D29a0D00fd1792Da8989Fa25";
@@ -50,11 +51,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen text-white bg-black">
-      <div className="w-full">
-        <Navbar />
-      </div>
-      <main className="flex flex-col justify-center items-center mt-[280px]">
+    <div className="flex flex-col min-h-screen bg-black text-white">
+      <Navbar />
+      <main className="flex flex-col justify-center items-center flex-grow mt-10">
         <button
           onClick={() => {
             console.log("clicked");
@@ -74,6 +73,7 @@ export default function Home() {
             : "You can check in now!"}
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
